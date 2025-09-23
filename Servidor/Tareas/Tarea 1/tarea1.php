@@ -222,9 +222,66 @@
             echo "<td>$unidades</td>";
             echo "<td>$total</td>";
             echo "</tr>";
+        ?>
+    </table>
+</body>
+</html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        tr, td{
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Su pedido</h1>
+
+    <table>
+        <tr>
+            <td><b>Nombre producto</b></td>
+            <td><b>Precio unitario</b></td>
+            <td><b>Unidades</b></td>
+            <td><b>Subtotal</b></td>
+        </tr>
+        <?php
+           //segunda forma
+            $productos = ["p1" => ["Reproductor MP3 (80 GB)" => [192.02, 1]], 
+                          "p2" => ["Fundas de colores" => [2.50, 5]], 
+                          "p3" => ["Reproductor de radio & control remoto" => [12.99, 1]]];
+
+            foreach($productos as $producto){
+                foreach ($producto as $key => $value) {
+                    $subtotal =  $value[0] * $value[1];
+                    $total += $subtotal;
+                    $unidades += $value[1];
+                    echo "<tr>";
+                    echo "<td> $key </td>";
+                    echo "<td> $value[0] </td>";
+                    echo "<td> $value[1] </td>";
+                    echo "<td> $subtotal</td>";
+                    echo "</tr>";   
+                }
+            }
+
+            echo "<tr>";
+            echo "<td>Total </td>";
+            echo "<td>-</td>";
+            echo "<td>$unidades</td>";
+            echo "<td>$total</td>";
+            echo "</tr>";
         ?>
     </table> 
-
 </body>
 </html>
