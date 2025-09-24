@@ -69,6 +69,8 @@
     echo "<br/>" . strlen($cadena);
     //Convierte la cadena original a mayúsculas.
     $cad = mb_strtoupper($cadena);
+     //Convierte la cadena original a minúsculas.
+    $cad = mb_strtolower($cadena);
     echo $cad;
     //Quita las tildes y los espacios a la cadena de texto “74635498 B Rubén González Díaz”
     $cadena2 = "74635498 B Rubén González Díaz";
