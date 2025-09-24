@@ -26,25 +26,35 @@ while (rondas > 0) {
         } else if (arrayj1[i] == "tijera" && arrayj2[i] == "papel") {
             contadorj1++;
         } else if (arrayj1[i] == "papel" && arrayj2[i] == "piedra") {
-            contadorj2++
+            contadorj1++
         } else if (arrayj1[i] == "papel" && arrayj2[i] == "tijera") {
-            contadorj1++;
+            contadorj2++;
         }
     }
 
     alert("Resultado: " + contadorj1 + "(" + j1 + ")" + " vs " + contadorj2 + "(" + j2 + ")");
 
     if (contadorj1 > contadorj2) {
-        alert("Ganador: " + j1);
+        alert("Ganador de la ronda: " + j1);
         rondasj1++;
     } else if (contadorj1 < contadorj2) {
-        alert("Ganador: " + j2);
+        alert("Ganador de la ronda: " + j2);
         rondasj2++;
     } else {
-        alert("Empate");
+        alert("Empate de la ronda");
     }
 
     rondas--;
+}
+
+alert("Marcador: " + rondasj1 + "(" + j1 + ")" + " vs " + rondasj2 + "(" + j2 + ")");
+
+if (rondasj1 > rondasj2) {
+    alert("Ganador: " + j1);
+} else if (rondasj1 < rondasj2) {
+    alert("Ganador: " + j2);
+} else {
+    alert("Empate");
 }
 
 
