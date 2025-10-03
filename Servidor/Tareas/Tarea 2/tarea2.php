@@ -24,7 +24,7 @@ for ($i = 0; $i < 10; $i++) {
     $array[] = rand(1, 10);
 }
 
-echo print_r($array, true);
+echo print_r($array,true);
 
 $contador = 0;
 
@@ -39,7 +39,7 @@ echo "El numero 2 aparece en el array $contador veces";
 //Ejercicio 3: Crea una matriz de 10 x 10, y calcula la suma de la diagonal principal y la suma de la diagonal secundaria y muestre por pantalla la diferencia de ambas.
 
 $matriz = [
-    [1,  2,  3,  4,  5,  6,  7,  8,  9, 10],
+    [ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10],
     [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
     [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
     [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
@@ -62,7 +62,7 @@ foreach ($matriz as $fila) {
 $sumaDiagonalPrincipal = 0;
 $sumaDiagonalSecundaria = 0;
 
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 10; $i++) { 
     $sumaDiagonalPrincipal += $matriz[$i][$i];
     $sumaDiagonalSecundaria += $matriz[$i][9 - $i];
 }
@@ -71,4 +71,6 @@ $diferencia = $sumaDiagonalPrincipal - $sumaDiagonalSecundaria;
 
 echo "<br>La suma de la diagonal principal es $sumaDiagonalPrincipal <br>";
 echo "La suma de la diagonal secundaria es $sumaDiagonalSecundaria <br>";
-echo "La diferencia es $diferencia";
+echo "La diferencia es $diferencia"; 
+
+?>
