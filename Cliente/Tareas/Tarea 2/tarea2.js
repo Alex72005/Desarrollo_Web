@@ -47,7 +47,6 @@ function esValido(candidato, oferta) {
 }
 
 //Ejemplo 
-
 let candidato = new Candidato(1, ["JavaScript", "HTML"], ["Madrid"], 30000);
 let oferta = new Oferta(0, ["JavaScript"], ["Madrid", "Málaga"], 24000);
 
