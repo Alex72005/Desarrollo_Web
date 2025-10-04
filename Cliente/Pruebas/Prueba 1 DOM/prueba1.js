@@ -35,6 +35,3 @@ while (parejasEncontradas < (cartas.length / 2)) {
 }
 
 alert("Has encontrado todas las parejas. Enhorabuena");
-
-
-
