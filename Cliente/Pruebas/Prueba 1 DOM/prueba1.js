@@ -1,5 +1,5 @@
-let oculto = ["X", "X", "X", "X", "X", "X", "X", "X"];
-let cartas = ["O", "B", "O", "E", "C", "B", "E", "C"];
+const oculto = ["X", "X", "X", "X", "X", "X", "X", "X"];
+const cartas = ["O", "B", "O", "E", "C", "B", "E", "C"];
 let tablero = document.getElementById("tablero");
 let parejasEncontradas = 0;
 
