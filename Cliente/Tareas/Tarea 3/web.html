@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro Santos">
+    <title>Gestor de Tareas</title>
+    <style>
+        :root {
+            --primary-color: blue;
+            --secondary-color: #3f37c9;
+            --border-color: #4895ef;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            line-height: 1.5;
+            min-height: 991px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            border-top: 5px solid var(--border-color);
+        }
+
+        .contenedor h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .contenedor label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .contenedor input,
+        .contenedor select,
+        .contenedor button {
+            margin-top: 5px;
+            width: 100%;
+            padding: 8px;
+        }
+
+        #lista {
+            margin-top: 10px;
+            white-space: pre-line;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="contenedor">
+            <div>
+                <h2>Agregar Tarea</h2>
+                <label>Categoría:
+                    <select id="categoriaAgregar">
+                        <option value="dwec">DWEC</option>
+                        <option value="dwes">DWES</option>
+                        <option value="empleo">EMPLEO</option>
+                        <option value="personal">PERSONAL</option>
+                    </select>
+                </label>
+                <label>Tarea:
+                    <input type="text" id="tareaInput" placeholder="Escribe la tarea">
+                </label>
+                <button id="btnAgregar">Agregar</button>
+            </div>
+
+            <div>
+                <h2>Borrar Tarea</h2>
+                <label>Categoría:
+                    <select id="categoriaBorrar">
+                        <option value="dwec">DWEC</option>
+                        <option value="dwes">DWES</option>
+                        <option value="empleo">EMPLEO</option>
+                        <option value="personal">PERSONAL</option>
+                    </select>
+                </label>
+                <label>Número de tarea:
+                    <input type="number" id="numeroBorrar" placeholder="Número">
+                </label>
+                <button id="btnBorrar">Borrar</button>
+            </div>
+
+            <div>
+                <h2>Lista de Tareas</h2>
+                <button id="btnListar">Mostrar Tareas</button>
+                <div id="lista"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="web.js"></script>
+</body>
+
+</html>
