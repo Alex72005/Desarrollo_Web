@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Autocompletado - Ejemplo simple</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px
+        }
+
+        input {
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 8px
+        }
+
+        .lista {
+            max-width: 400px
+        }
+
+        .item {
+            padding: 6px 8px;
+            border-bottom: 1px solid #eee
+        }
+
+        .hidden {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Autocompletado (simple)</h2>
+    <input id="buscador" placeholder="Escribe para filtrar..." autocomplete="off" />
+    <div class="lista" id="lista"></div>
+
+    <script>
+        // Lista fija (puedes cambiar las palabras)
+        const palabras = ["mesa", "movil", "caja", "portatil", "altavoz", "mostaza", "monitor", "mouse", "mando", "microfono"];
+
+        const listaDiv = document.querySelector('#lista');
+        const buscador = document.querySelector('#buscador');
+
+        function mostrarResultados(filtro) {
+            if (!filtro) {
+                filtro = ''; // por si es undefined o null
+            }
+
+            let term = filtro.toLowerCase();
+            let resultados = [];
+
+            // recorrer el array manualmente
+            for (let i = 0; i < palabras.length; i++) {
+                let palabra = palabras[i];
+                if (palabra.toLowerCase().indexOf(term) !== -1) {
+                    resultados.push(palabra);
+                }
+            }
+
+            // construir el HTML manualmente
+            let html = '';
+            if (resultados.length > 0) {
+                for (let j = 0; j < resultados.length; j++) {
+                    html += '<div class="item">' + resultados[j] + '</div>';
+                }
+            } else {
+                html = '<div class="item">No hay resultados</div>';
+            }
+
+            listaDiv.innerHTML = html;
+        }
+
+        // evento input
+        buscador.addEventListener('input', e => {
+            mostrarResultados(e.target.value);
+        });
+
+        // init
+        mostrarResultados();
+    </script>
+</body>
+
+</html>
