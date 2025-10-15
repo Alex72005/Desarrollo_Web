@@ -78,7 +78,9 @@ btnJugar.addEventListener("click", () => {
     if (jugadaJugador1 != "" && jugadaJugador2 != "") {
         if (jugadaJugador1 == jugadaJugador2) {
             alert("Empate")
-        } else if (jugadaJugador1 == "piedra" && jugadaJugador2 == "tijera" || jugadaJugador1 == "papel" && jugadaJugador2 == "piedra" || jugadaJugador1 == "tijera" && jugadaJugador2 == "papel") {
+        } else if (jugadaJugador1 == "piedra" && jugadaJugador2 == "tijera" || 
+            jugadaJugador1 == "papel" && jugadaJugador2 == "piedra" || 
+            jugadaJugador1 == "tijera" && jugadaJugador2 == "papel") {
             puntos1++
         } else {
             puntos2++

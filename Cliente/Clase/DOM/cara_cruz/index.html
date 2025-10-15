@@ -9,6 +9,25 @@
         .seleccionarImagen {
             opacity: 50%;
         }
+
+        @keyframes girarMoneda {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            50% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        /* Clase que activa la animación */
+        .girar {
+            animation: girarMoneda 0.3s ease;
+        }
     </style>
 </head>
 
@@ -16,7 +35,7 @@
 
     <p id="racha">Racha actual: 0</p>
     <p id="rachaMax">Racha máxima: 0</p>
-    
+
     <div id="imagenes">
         <img id="cara" src="img/cara.png" alt="">
         <img id="cruz" src="img/cruz.png" alt="">

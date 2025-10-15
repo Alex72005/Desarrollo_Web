@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijera</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .seleccionarImagen {
+            opacity: 60%;
+        }
+
+        #imagenes img {
+            height: 200px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #imagenes img:hover {
+            transform: scale(1.05);
+        }
+
+        #imagenes2 img {
+            height: 200px;
+            margin: 10px;
+        }
+
+        #mensaje {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            min-height: 30px;
+        }
+
+        #marcadores {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #racha,
+        #rachaMax {
+            font-size: 16px;
+        }
+
+        .verde {
+            color: #28a745;
+        }
+
+        .rojo {
+            color: #dc3545;
+        }
+
+        .gris {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Jugador 1 - <span id="contador1"> 0 </span> puntos</h1>
+        <div id="imagenes">
+            <img id="piedra" src="img/piedra.png" alt="">
+            <img id="papel" src="img/papel.png" alt="">
+            <img id="tijera" src="img/tijera.png" alt="">
+        </div>
+    </div>
+
+    <div>
+        <h1>Jugador 2 - <span id="contador2"> 0 </span> puntos</h1>
+        <div id="imagenes2"></div>
+    </div>
+
+    <p id="mensaje"></p>
+
+    <div id="marcadores">
+        <p id="racha">Racha actual: 0</p>
+        <p id="rachaMax">Racha máxima: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

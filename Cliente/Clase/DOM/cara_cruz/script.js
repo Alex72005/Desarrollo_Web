@@ -18,6 +18,8 @@ imagenes.forEach(img => {
             nuevaImg.src = "img/cruz.png"
         }
 
+        nuevaImg.classList.add("girar");
+
         resultado.innerHTML = "";
         resultado.appendChild(nuevaImg);
 
