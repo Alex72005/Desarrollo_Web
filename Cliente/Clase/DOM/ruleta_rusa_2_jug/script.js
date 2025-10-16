@@ -27,6 +27,8 @@ function actualizarMarcador() {
 
 btnDisparar.addEventListener("click", () => {
     if (jugando) {
+        // posicionActual = Math.floor(Math.random() * 6) + 1;
+        // setMensaje("🔄 El tambor se ha girado...", "gris");
         console.log("Bala: " + bala + " | Cámara actual: " + posicionActual + " | Turno: Jugador " + turno)
 
         // COMPROBAR SI SALE LA BALA
@@ -101,3 +103,13 @@ btnReiniciarMarcador.addEventListener("click", function() {
 
     console.log("Marcador reiniciado. Nueva bala: " + bala + " | Posición inicial: " + posicionActual)
 })
+
+// const btnGirar = document.querySelector("#girarTambor");
+// --- GIRAR TAMBOR (solo cambia la posición actual, no la bala) ---
+// btnGirar.addEventListener("click", function() {
+//     if (jugando == true) {
+//         posicionActual = Math.floor(Math.random() * 6) + 1;
+//         setMensaje("🔄 Jugador " + turno + " ha girado el tambor.", "gris");
+//         console.log("El tambor ahora empieza en la posición " + posicionActual);
+//     }
+// });
