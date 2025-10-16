@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Rusa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #mensaje {
+            font-size: 24px;
+            margin-top: 20px;
+            min-height: 40px;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .rojo {
+            color: red;
+        }
+
+        .gris {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔫 Juego de la Ruleta Rusa</h1>
+
+    <p>Hay una bala escondida entre 6 cámaras.</p>
+    <p>¿Tendrás suerte?</p>
+
+    <button id="disparar">Disparar</button>
+    <button id="reiniciar">Reiniciar</button>
+
+    <p id="mensaje"></p>
+    <p id="ronda">Ronda actual: 1</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
