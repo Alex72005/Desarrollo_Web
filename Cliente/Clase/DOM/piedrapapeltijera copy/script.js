@@ -5,6 +5,7 @@ const contador1 = document.querySelector("#contador1")
 const contador2 = document.querySelector("#contador2")
 const rachaJug = document.querySelector("#racha")
 const rachaMaxJug = document.querySelector("#rachaMax")
+const botonReiniciar = document.querySelector("#reiniciar");
 const getRandomInt = max => Math.floor(Math.random() * max);
 
 let jugador1 = 0;
@@ -62,3 +63,20 @@ imagenes.forEach(img => {
         }, 300)
     })
 })
+
+botonReiniciar.addEventListener("click", () => {
+    jugador1 = 0;
+    jugador2 = 0;
+    racha = 0;
+    rachaMax = 0;
+
+    resultado.innerHTML = "";
+    mensaje.textContent = "";
+    mensaje.classList.remove("verde", "rojo", "gris");
+    imagenes.forEach(i => i.classList.remove("seleccionarImagen"));
+
+    contador1.textContent = jugador1;
+    contador2.textContent = jugador2;
+    rachaJug.textContent = "Racha actual: " + racha;
+    rachaMaxJug.textContent = "Racha máxima: " + rachaMax;
+});
