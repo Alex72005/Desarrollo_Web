@@ -1,70 +1,35 @@
 // Ejercicio 1: cara o cruz. 
-// let opcion = "";
-// let racha = 0;
-// let cantidadrondasseguidas = 0;
-// let opcionrandom = 0;
-// let opcionsalido = "";
+let opcion = "";
+let racha = 0;
+let mejorRacha = 0;
+let cantidadrondasseguidas = 0;
+let opcionrandom = 0;
+let opcionsalido = "";
 
-// const getRandomInt = max => Math.floor(Math.random() * max);
+const getRandomInt = max => Math.floor(Math.random() * max);
 
-// do {
-//     opcion = prompt("Introduzca CARA o CRUZ o SALIR: ");
-//     opcionrandom = getRandomInt(2);
+while (opcion != "SALIR") {
+    opcion = prompt("Introduzca CARA o CRUZ o SALIR: ");
 
-//     if (opcion != "SALIR") {
-//         if (opcionrandom == 0) {
-//             alert("La moneda ha salido CARA");
-//             opcionsalido = "CARA";
-//         } else if (opcionrandom == 1) {
-//             alert("La moneda ha salido CRUZ");
-//             opcionsalido = "CRUZ";
-//         }
+    if (opcion == "CARA" || opcion == "CRUZ") {
+        opcionrandom = getRandomInt(2);
+        opcionsalido = opcionrandom = 0 ? "CARA" : "CRUZ";
+        alert("Ha salido " + opcionsalido);
 
-//         if (opcion == opcionsalido) {
-//             racha++;
-//             alert("¡Has acertado! Racha= " + racha + " acierto");
-//         } else {
-//             cantidadrondasseguidas = racha;
-//             racha = 0;
-//             alert("¡Has fallado!")
-//         }
-//     }
+        if (opcion == opcionsalido) {
+            racha++;
+            if (racha > mejorRacha) {
+                mejorRacha = racha;
+            }
+            alert("¡Has acertado! Racha= " + racha + " acierto");
+        } else {
+            racha = 0;
+            alert("¡Has fallado!")
+        }
+    }
+}
 
-// } while (opcion != "SALIR");
-
-// alert("¡Hasta pronto! Cantidad de rondas seguidas de aciertos: " + cantidadrondasseguidas);
-
-// let opcion = "";
-// let racha = 0;
-// let mejorRacha = 0;
-// let cantidadrondasseguidas = 0;
-// let opcionrandom = 0;
-// let opcionsalido = "";
-
-// const getRandomInt = max => Math.floor(Math.random() * max);
-
-// while (opcion != "SALIR") {
-//     opcion = prompt("Introduzca CARA o CRUZ o SALIR: ");
-
-//     if (opcion == "CARA" || opcion == "CRUZ") {
-//         opcionrandom = getRandomInt(2);
-//         opcionsalido = opcionrandom = 0 ? "CARA" : "CRUZ";
-//         alert("Ha salido " + opcionsalido);
-
-//         if (opcion == opcionsalido) {
-//             racha++;
-//             if (racha > mejorRacha) {
-//                 mejorRacha = racha;
-//             }
-//             alert("¡Has acertado! Racha= " + racha + " acierto");
-//         } else {
-//             racha = 0;
-//             alert("¡Has fallado!")
-//         }
-//     }
-// }
-
-// alert("¡Hasta pronto! Tu mejor racha de aciertos fue: " + mejorRacha + " veces");
+alert("¡Hasta pronto! Tu mejor racha de aciertos fue: " + mejorRacha + " veces");
 
 // Ejercicio 2.
 
