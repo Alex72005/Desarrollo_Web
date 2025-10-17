@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #divJ1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        #divJ1 img {
+            width: 180px;
+            cursor: pointer;
+            border: 4px solid transparent;
+            border-radius: 10px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        #divJ1 img:hover {
+            transform: scale(1.05);
+        }
+
+        #marcador {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+        }
+
+        #puntuacion {
+            border: 3px solid black;
+            width: 100px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 760px;
+            margin-top: 25px;
+            margin-bottom: 50px;
+        }
+
+        #dado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #dado img{
+            width: 120px;
+        }
+
+        #turno {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+            margin: 5px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .rojo {
+            color: red;
+        }
+
+        .gris {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PIG</h1>
+
+    <p id="turno">Turno: Jugador 1</p>
+
+    <div id="divJ1">
+        <img src="img/j1.png" alt="" id="j1">
+        <img src="img/j2.png" alt="" id="j2">
+    </div>
+
+    <p id="marcador">Jugador 1: <span id="marcadorJ1">0</span> | Jugador 2: <span id="marcadorJ2">0</span></p>
+
+    <p id="puntuacion">0</p>
+
+    <div id="dado">
+        <img src="img/cara1.png" alt="">
+    </div>
+
+    <button id="btnTirar">Tirar Dado</button>
+    <button id="btnPasar">Pasar</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
