@@ -44,16 +44,47 @@ const desplazarCelda = (m, celda) => {
 
 }
 
+const puedeDesplazar = (m, celda) => {
+    let posicionFilaCero = -1
+    let posicionColumnaCero = -1
+    let posicionFilaCeldaSeleccionada = -1
+    let posicionColumnaCeldaSeleccionada = -1
+
+    for (let i = 0; i < m.length; i++) {
+        for (let j = 0; j < m[i].length; j++) {
+            if (m[i][j] == 0) {
+                posicionFilaCero = i
+                posicionColumnaCero = j
+
+            } else if (m[i][j] == celda) {
+                posicionFilaCeldaSeleccionada = i
+                posicionColumnaCeldaSeleccionada = j
+            }
+        }
+    }
+
+    let validacion = false;
+
+    if (((posicionFilaCero == posicionFilaCeldaSeleccionada) && Math.abs(posicionColumnaCero - posicionColumnaCeldaSeleccionada) == 1) ||
+        ((posicionColumnaCero == posicionColumnaCeldaSeleccionada) && Math.abs(posicionFilaCero - posicionFilaCeldaSeleccionada) == 1)) {
+        validacion = true
+    }
+
+    return validacion
+}
+
 const comprobarResultado = (m) => {
     let cont = 1
     let orden = true
 
     for (let i = 0; i < m.length; i++) {
         for (let j = 0; j < m[i].length; j++) {
-            if (m[i][j] != cont) {
-                orden = false;
+            if (!(i == m.length - 1 && j == m[i].length - 1)) {
+                if (m[i][j] != cont) {
+                    orden = false;
+                }
+                cont++
             }
-            cont++
         }
     }
 
@@ -63,10 +94,16 @@ const comprobarResultado = (m) => {
 celdas.forEach(celda => {
     celda.addEventListener('click', () => {
         let celdaSeleccionada = celda.textContent
-        desplazarCelda(matriz, celdaSeleccionada)
-        pintarMatriz(matriz)
-        if (comprobarResultado(matriz)) {
-            alert("hola")
+        if (puedeDesplazar(matriz, celdaSeleccionada)) {
+            desplazarCelda(matriz, celdaSeleccionada)
+            pintarMatriz(matriz)
+            if (comprobarResultado(matriz)) {
+                setTimeout(() => {
+                    alert("HOLA")
+
+                }, 100)
+            }
+
         }
     })
 })
