@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const pintarMatriz = (m) => {
     let cont = 0
-    for (let i = 0; i < matriz.length; i++) {
-        for (let j = 0; j < matriz[i].length; j++) {
-            celdas[cont].textContent = matriz[i][j]
+    for (let i = 0; i < m.length; i++) {
+        for (let j = 0; j < m[i].length; j++) {
+            celdas[cont].textContent = m[i][j]
             cont++
         }
     }
