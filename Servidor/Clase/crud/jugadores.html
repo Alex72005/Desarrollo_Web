@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Jugadores</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin: 25px 0;
+        }
+
+        iframe {
+            width: 800px;
+            height: 350px;
+            border: 1px solid #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CRUD de Jugadores</h1>
+    <a href="equipos.html">⬅ Volver a equipos</a>
+
+    <!-- CREAR -->
+    <h3>Crear jugador</h3>
+    <form action="jugadores.php" method="POST" target="resultado">
+        Nombre: <input type="text" name="nombre" required><br>
+        Posición: <input type="text" name="posicion" required><br>
+        ID Equipo: <input type="number" name="id_equipo" required><br>
+        <button type="submit">Crear</button>
+    </form>
+    <hr>
+
+    <!-- ACTUALIZAR -->
+    <h3>Actualizar jugador</h3>
+    <form action="jugadores.php" method="POST" target="resultado">
+        <input type="hidden" name="_method" value="PUT">
+        ID Jugador: <input type="number" name="id" required><br>
+        Nuevo nombre: <input type="text" name="nombre" required><br>
+        Nueva posición: <input type="text" name="posicion" required><br>
+        Nuevo ID equipo: <input type="number" name="id_equipo" required><br>
+        <button type="submit">Actualizar</button>
+    </form>
+    <hr>
+
+    <!-- ELIMINAR -->
+    <h3>Eliminar jugador</h3>
+    <form action="jugadores.php" method="POST" target="resultado">
+        <input type="hidden" name="_method" value="DELETE">
+        ID Jugador: <input type="number" name="id" required>
+        <button type="submit">Eliminar</button>
+    </form>
+    <hr>
+
+    <!-- LISTAR -->
+    <h3>Mostrar jugadores</h3>
+    <form action="jugadores.php" method="GET" target="resultado"></form>
+    <iframe name="resultado" src="jugadores.php"></iframe>
+</body>
+
+</html>

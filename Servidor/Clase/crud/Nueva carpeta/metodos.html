@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>GET</h1>
+    <form action="./accion.php" method="GET">
+        <label for="inpText">TEXTO</label>
+        <input type="text" name="inpText" id="inpText">
+
+        <br><br>
+
+        <label for="inpNumber">NUMBER</label>
+        <input type="number" name="inpNumber" id="inpNumber">
+
+        <br><br>
+
+        <label for="inpEmail">EMAIL</label>
+        <input type="email" name="inpEmail" id="inpEmail">
+
+        <br><br>
+
+        <label for="inpPassword">PASSWORD</label>
+        <input type="password" name="inpPassword" id="inpPassword">
+
+        <br><br>
+
+        <label for="inpRange">RANGE</label>
+        <input type="range" name="inpRange" id="inpRange">
+
+        <br><br>
+
+        <label for="inpRadio1">NIÑO</label>
+        <input type="radio" name="inpRadio" id="inpRadio1" value="NIÑO">
+        <label for="inpRadio2">ADOLESCENTE</label>
+        <input type="radio" name="inpRadio" id="inpRadio2" value="ADOLESCENTE">
+        <label for="inpRadio3">ADULTO</label>
+        <input type="radio" name="inpRadio" id="inpRadio3" value="ADULTO">
+
+        <br><br>
+
+        <label for="selTipo">SELECT</label>
+        <select name="selTipo" id="selTipo">
+            <option value="1">ADULTO</option>
+            <option value="2">NIÑO</option>
+            <option value="3">ADOLESCENTE</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br><br><br>
+
+    <h1>POST</h1>
+    <form action="./accion.php" method="POST">
+        <label for="inpText">TEXTO</label>
+        <input type="text" name="inpText" id="inpText">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h1>PUT</h1>
+    <form action="./accion.php" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <label for="inpText">TEXTO</label>
+        <input type="text" name="inpText" id="inpText">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h1>DELETE</h1>
+    <form action="./accion.php" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <label for="inpText">TEXTO</label>
+        <input type="text" name="inpText" id="inpText">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reservas</h1>
+    <form action="insertar.php" method="post">
+        <label for="nombre">Introduzca el nombre del usuario</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="edad">Introduzca la edad del usuario</label>
+        <input type="number" name="edad" id="edad">
+        <label for="email">Introduzca el email del usuario</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br><br><br>
+
+    <form action="insertar.php" method="get">
+        <label for="nombre">Introduzca el nombre del usuario</label>
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br><br><br>
+
+
+    <form action="insertar.php" method="post">
+        <input type="hidden" name="_method" value="put">
+
+        <label for="nombre">escribe el nombre usuario a cambiar</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="opciones"></label>
+        <select name="opciones" id="opciones">
+            <option value="nombre">nombre</option>
+            <option value="edad">edad</option>
+            <option value="email">email</option>
+        </select>
+
+        <label for="datoNuevo">escribe el nuevo dato</label>
+        <input type="text" name="datoNuevo" id="datoNuevo">
+        <input type="submit" value="Enviar">
+    </form>
+
+     <br><br><br>
+
+
+     <form action="insertar.php" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <label for="nombre">Escribe el nombre del usuario a borrar</label>
+        <input type="text" name="nombre" id="nombre">
+        <input type="submit" value="Enviar">
+     </form>
+    
+</body>
+</html>

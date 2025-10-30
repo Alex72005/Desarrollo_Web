@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Equipos</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        h1 {
+            color: darkgreen;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CRUD de Equipos</h1>
+
+    <!-- CREAR -->
+    <h3>Crear equipo</h3>
+    <form action="equipos.php" method="POST" target="resultado">
+        Nombre: <input type="text" name="nombre" required>
+        <button type="submit">Crear</button>
+    </form>
+    <hr>
+
+    <!-- ACTUALIZAR -->
+    <h3>Actualizar equipo</h3>
+    <form action="equipos.php" method="POST" target="resultado">
+        <input type="hidden" name="_method" value="PUT">
+        ID: <input type="number" name="id" required>
+        Nuevo nombre: <input type="text" name="nombre" required>
+        <button type="submit">Actualizar</button>
+    </form>
+    <hr>
+
+    <!-- ELIMINAR -->
+    <h3>Eliminar equipo</h3>
+    <form action="equipos.php" method="POST" target="resultado">
+        <input type="hidden" name="_method" value="DELETE">
+        ID: <input type="number" name="id" required>
+        <button type="submit">Eliminar</button>
+    </form>
+
+    <!-- LISTAR -->
+    <form action="equipos.php" method="GET" target="resultado"></form>
+    <hr>
+    <h3>Resultado</h3>
+    <!-- Aquí se mostrará SIEMPRE el resultado sin salir de esta vista -->
+    <iframe name="resultado" src="equipos.php"></iframe>
+
+</body>
+
+</html>
