@@ -1,0 +1,4 @@
+<div>
+    {{$idUsuario}};
+    {{$email}};
+</div>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pacientes</title>
+</head>
+
+<body>
+    <h1>Gestión de Pacientes</h1>
+
+    <h2>Mostrar Pacientes</h2>
+    <button id="mostrar-todos">Mostrar pacientes</button>
+    <div id="resultado-pacientes"></div>
+    <hr>
+
+    <h2>Crear paciente</h2>
+    <label for="dni-crear">DNI:</label>
+    <input type="text" id="dni-crear" name="dni" required>
+    <br><br>
+    <label for="nombre-crear">Nombre:</label>
+    <input type="text" id="nombre-crear" name="nombre" required>
+    <br><br>
+    <label for="apellidos-crear">Apellidos:</label>
+    <input type="text" id="apellidos-crear" name="apellidos" required>
+    <br><br>
+    <label for="direccion-crear">Dirección:</label>
+    <input type="text" id="direccion-crear" name="direccion" required>
+    <br><br>
+    <label for="sexo-crear">Sexo:</label>
+    <select id="sexo-crear" name="sexo" required>
+        <option value="1">Masculino</option>
+        <option value="0">Femenino</option>
+    </select>
+    <br><br>
+    <label for="codpostal-crear">Código Postal:</label>
+    <input type="text" id="codpostal-crear" name="codPostal" required>
+    <br><br>
+    <label for="telefono-crear">Teléfono:</label>
+    <input type="text" id="telefono-crear" name="telefono" required>
+
+    <button type="submit" id="crear">Crear paciente</button>
+    <hr>
+
+    <h2>Editar paciente</h2>
+    <label for="id-editar">Selecciona paciente:</label>
+    <select id="id-editar" name="id" required>
+        <option value="">Selecciona un paciente</option>
+    </select>
+    <br><br>
+    <label for="dni-editar">DNI:</label>
+    <input type="text" id="dni-editar" name="dni" required>
+    <br><br>
+    <label for="nombre-editar">Nombre:</label>
+    <input type="text" id="nombre-editar" name="nombre" required>
+    <br><br>
+    <label for="apellidos-editar">Apellidos:</label>
+    <input type="text" id="apellidos-editar" name="apellidos" required>
+    <br><br>
+    <label for="direccion-editar">Dirección:</label>
+    <input type="text" id="direccion-editar" name="direccion" required>
+    <br><br>
+    <label for="sexo-editar">Sexo:</label>
+    <select id="sexo-editar" name="sexo" required>
+        <option value="1">Masculino</option>
+        <option value="0">Femenino</option>
+    </select>
+    <br><br>
+    <label for="codpostal-editar">Código Postal:</label>
+    <input type="text" id="codpostal-editar" name="codPostal" required>
+    <br><br>
+    <label for="telefono-editar">Teléfono:</label>
+    <input type="text" id="telefono-editar" name="telefono" required>
+
+    <button type="submit" id="editar">Actualizar paciente</button>
+    <hr>
+
+    <h2>Eliminar paciente</h2>
+    <label for="id-eliminar">Selecciona paciente:</label>
+    <select id="id-eliminar" name="id" required>
+        <option value="">Selecciona un paciente</option>
+    </select>
+
+    <button type="submit" id="eliminar">Eliminar paciente</button>
+    <hr>
+
+    <h2>Buscar paciente por ID</h2>
+    <label for="id-mostrar">ID del paciente:</label>
+    <input type="number" id="id-mostrar" name="id" required>
+
+    <button type="submit" id="mostrar-id">Buscar paciente</button>
+
+    <div id="resultado-paciente"></div>
+
+    <script src="paciente.js"></script>
+</body>
+
+</html>

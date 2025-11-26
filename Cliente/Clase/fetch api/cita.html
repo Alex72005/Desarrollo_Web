@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas</title>
+</head>
+<body>
+    <h2>Index</h2>
+    <!-- <button type="submit" id="mostrar-todos">Mostrar Citas</button> -->
+    <div id="resultado-citas"></div>
+    <hr>
+
+    <h2>Store</h2>
+    <label for="fecha-crear">Fecha</label>
+    <input type="date" name="fecha" id="fecha-crear" required>
+    <label for="motivo-crear">Motivo</label>
+    <input type="text" name="motivo" id="motivo-crear" required>
+    <button type="submit" id="crear">Crear cita</button>
+    <hr>
+
+    <h2>Show</h2>
+    <label for="id-mostrar">Id cita: </label>
+    <input type="number" name="id" id="id-mostrar" required>
+    <button type="submit" id="mostrar-id">Buscar cita</button>
+    <div id="resultado-cita"></div>
+    <hr>
+
+    <h2>Update</h2>
+    <label for="id-editar">Seleccione una cita</label>
+    <select name="id" id="id-editar" required>
+        <option value="">Seleccione una cita</option>
+    </select>
+    <label for="fecha-editar">Fecha</label>
+    <input type="date" name="fecha" id="fecha-editar" required>
+    <label for="motivo-editar">Motivo</label>
+    <input type="text" name="motivo" id="motivo-editar" required>
+    <button type="submit" id="editar">Actualizar cita</button>
+    <hr>
+
+    <h2>Destroy</h2>
+    <label for="id-eliminar">Seleccione una cita</label>
+    <select name="id" id="id-eliminar" required>
+        <option value="">Seleccione una cita</option>
+    </select>
+    <button type="submit" id="eliminar">Eliminar cita</button>
+
+    <script src="cita.js"></script>
+</body>
+</html>

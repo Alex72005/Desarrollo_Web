@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinicas</title>
+</head>
+
+<body>
+    <h2>Index</h2>
+    <div id="resultado-clinicas"></div>
+    <hr>
+
+    <h2>Store</h2>
+    <label for="direccion-crear">Direccion</label>
+    <input type="text" name="direccion" id="direccion-crear">
+    <label for="correo-crear">Correo</label>
+    <input type="text" name="correo" id="correo-crear">
+    <label for="telefono-crear">Telefono</label>
+    <input type="text" name="telefono" id="telefono-crear">
+    <label for="nombre-crear">Nombre</label>
+    <input type="text" name="nombre" id="nombre-crear">
+    <label for="estado-crear">Estado</label>
+    <input type="text" name="estado" id="estado-crear">
+    <button type="submit" id="crear">Crear Clinica</button>
+    <hr>
+
+    <h2>Show</h2>
+    <label for="id-mostrar">ID Clinica: </label>
+    <input type="number" name="id" id="id-mostrar">
+    <button type="submit" id="mostrar-id">Buscar Clinica</button>
+    <div id="resultado-clinica"></div>
+    <hr>
+
+    <h2>Update</h2>
+    <label for="id-editar">ID Clinica</label>
+    <select name="id" id="id-editar">
+        <option value="">Seleccione una clinica</option>
+    </select>
+    <label for="direccion-editar">Direccion</label>
+    <input type="text" name="direccion" id="direccion-editar">
+    <label for="correo-editar">Correo</label>
+    <input type="text" name="correo" id="correo-editar">
+    <label for="telefono-editar">Telefono</label>
+    <input type="text" name="telefono" id="telefono-editar">
+    <label for="nombre-editar">Nombre</label>
+    <input type="text" name="nombre" id="nombre-editar">
+    <label for="estado-editar">Estado</label>
+    <input type="text" name="estado" id="estado-editar">
+    <button type="submit" id="editar">Actualizar Clinica</button>
+    <hr>
+
+    <h2>Destroy</h2>
+    <label for="id-eliminar">ID Clinica</label>
+    <select name="id" id="id-eliminar">
+        <option value="">Seleccione una clinica</option>
+    </select>
+    <button type="submit" id="eliminar">Eliminar Clinica</button>
+
+    <script src="clinica.js"></script>
+</body>
+</html>

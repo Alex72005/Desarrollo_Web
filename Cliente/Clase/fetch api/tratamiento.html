@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamientos</title>
+</head>
+
+<body>
+    <h2>Index</h2>
+    <button id="mostrar-todos">Mostrar tratamientos</button>
+    <div id="resultado-tratamientos"></div>
+    <hr>
+
+    <h2>Store</h2>
+    <label for="nombre-crear">Nombre</label>
+    <input type="text" id="nombre-crear" name="nombre" required>
+    <label for="duracion-crear">Duracion</label>
+    <input type="time" id="duracion-crear" name="duracion" required>
+    <label for="precio-crear">Precio</label>
+    <input type="number" step="0.1" id="precio-crear" name="precio" required>
+    <label for="descripcion-crear">Descripcion</label>
+    <input type="text" id="descripcion-crear" name="descripcion" required>
+    <label for="fecha_inicio-crear">Fecha Inicio</label>
+    <input type="date" id="fecha_inicio-crear" name="fecha_inicio" required>
+    <label for="fecha_fin-crear">Fecha Fin</label>
+    <input type="date" id="fecha_fin-crear" name="fecha_fin" required>
+    <button type="submit" id="crear">Crear tratamiento</button>
+    <hr>
+
+    <h2>Show</h2>
+    <label for="id-mostrar">ID tratamiento</label>
+    <input type="number" id="id-mostrar" name="id" required>
+    <button type="submit" id="mostrar-id">Buscar tratamiento</button>
+    <div id="resultado-tratamiento"></div>
+    <hr>
+
+    <h2>Update</h2>
+    <label for="id-editar">Selecciona tratamiento</label>
+    <select name="id" id="id-editar" required>
+        <option value="">Selecciona un tratamiento</option>
+    </select>
+    <label for="nombre-editar">Nombre</label>
+    <input type="text" id="nombre-editar" name="nombre" required>
+    <label for="duracion-editar">Duracion</label>
+    <input type="time" step="1" id="duracion-editar" name="duracion" required min="00:00:00">
+    <label for="precio-editar">Precio</label>
+    <input type="number" step="0.1" id="precio-editar" name="precio" required>
+    <label for="descripcion-editar">Descripcion</label>
+    <input type="text" id="descripcion-editar" name="descripcion" required>
+    <label for="fecha_inicio-editar">Fecha Inicio</label>
+    <input type="date" id="fecha_inicio-editar" name="fecha_inicio" required><br>
+    <label for="fecha_fin-editar">Fecha Fin</label>
+    <input type="date" id="fecha_fin-editar" name="fecha_fin" required>
+    <button type="submit" id="editar">Actualizar tratamiento</button>
+    <hr>
+
+    <h2>Destroy</h2>
+    <label for="id-eliminar">Selecciona tratamiento</label>
+    <select name="id" id="id-eliminar" required>
+        <option value="">Selecciona un tratamiento</option>
+    </select>
+    <button type="submit" id="eliminar">Eliminar tratamiento</button>
+    <hr>
+
+    <script src="tratamiento.js"></script>
+</body>
+
+</html>
