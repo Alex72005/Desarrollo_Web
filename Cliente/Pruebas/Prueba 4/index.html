@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .error {
+        color: red;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+</style>
 
 <body>
     <h2>Index</h2>
@@ -15,12 +23,20 @@
     <h2>Store</h2>
     <label for="nombre-crear">Nombre: </label>
     <input type="text" name="nombre" id="nombre-crear">
+    <small id="error-nombre-crear" class="error"></small>
+
     <label for="ubicacion-crear">Ubicacion: </label>
     <input type="text" name="ubicacion" id="ubicacion-crear">
+    <small id="error-ubicacion-crear" class="error"></small>
+
     <label for="fecha-crear">Fecha: </label>
     <input type="date" name="fecha" id="fecha-crear">
+    <small id="error-fecha-crear" class="error"></small>
+
     <label for="hora-crear">Hora: </label>
     <input type="time" name="hora" id="hora-crear">
+    <small id="error-hora-crear" class="error"></small>
+
     <button type="submit" id="crear">Crear Evento</button>
     <hr>
 
@@ -64,7 +80,7 @@
     <div id="resultado-evento-fecha"></div>
     <hr>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 
 </html>
