@@ -188,6 +188,8 @@ document.querySelector("#crear").addEventListener("click", () => {
         })
             .then(r => r.json())
             .then(mostrarEventos);
+    } else {
+        document.querySelector("#crear").disabled = true
     }
 });
 
