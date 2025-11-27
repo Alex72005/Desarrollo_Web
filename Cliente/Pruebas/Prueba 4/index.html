@@ -9,10 +9,18 @@
 <style>
     .error {
         color: red;
-        font-size: 0.9em;
-        font-weight: bold;
-        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 600;
     }
+
+    .input-error {
+        border: 2px solid red !important;
+    }
+
+    .input-ok {
+        border: 2px solid green !important;
+    }
+
 </style>
 
 <body>
@@ -23,19 +31,19 @@
     <h2>Store</h2>
     <label for="nombre-crear">Nombre: </label>
     <input type="text" name="nombre" id="nombre-crear">
-    <small id="error-nombre-crear" class="error"></small>
+    <small id="error-nombre-crear"></small>
 
     <label for="ubicacion-crear">Ubicacion: </label>
     <input type="text" name="ubicacion" id="ubicacion-crear">
-    <small id="error-ubicacion-crear" class="error"></small>
+    <small id="error-ubicacion-crear"></small>
 
     <label for="fecha-crear">Fecha: </label>
     <input type="date" name="fecha" id="fecha-crear">
-    <small id="error-fecha-crear" class="error"></small>
+    <small id="error-fecha-crear"></small>
 
     <label for="hora-crear">Hora: </label>
     <input type="time" name="hora" id="hora-crear">
-    <small id="error-hora-crear" class="error"></small>
+    <small id="error-hora-crear"></small>
 
     <button type="submit" id="crear">Crear Evento</button>
     <hr>
@@ -80,7 +88,7 @@
     <div id="resultado-evento-fecha"></div>
     <hr>
 
-    <script src="script2.js"></script>
+    <script src="script3.js"></script>
 </body>
 
 </html>

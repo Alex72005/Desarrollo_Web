@@ -151,3 +151,4 @@ function validarTexto(texto, min, max) {
 
     return error;
 }
+

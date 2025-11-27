@@ -2,13 +2,18 @@
 /^[0-9]+$/ solo puede contener numeros
 / {2,}/ contiene dos espacios seguidos
 /^\S+@\S+\.\S+$/ validacion email
-/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/  validacion de contraseña: 8 caracteres, numeros, letras y simbolos 
-/^[6-9][0-9]{8}$/ validacion telefono: tenga 9 digitos, no empieze por 0 
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/ validacion de contraseña: 8 caracteres, numeros, letras y simbolos 
+/^\d{9}$/ validacion telefono: tenga 9 digitos  en laravel: 'telefono' => 'digits:9'
+/^[6-9][0-9]{8}$/ validacion telefono: tenga 9 digitos, no empieze por 0  
 /^(.)\1+$/ no permitir un numero repetido en este caso el 1
+/(.)\1{3,}/ No permitir caracteres repetidos (ej: "aaaaaa")
 /[^a-zA-Z0-9\s]/ permitir caracteres especiales 
 /^\d{2}:\d{2}$/ validacion hora formato HH:mm 
 /^([01]\d|2[0-3]):([0-5]\d)$/ Validar que la hora sea REAL (00:00 a 23:59)
 /^\d{4}-\d{2}-\d{2}$/ Validar fecha formato correcto (YYYY-MM-DD)
+/*email*/
+/^[\w\.-]+@[\w\.-]+\.\w+$/ expresion regular 
+'email' => 'required|email|unique:users,email'   en laravel
 
 se usa .test(expresion) devuelve false si contiene mas cosas aparte de letras 
 
