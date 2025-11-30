@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Index</h2>
+    <div id="resultado-eventos"></div>
+    <hr>
+
+    <h2>Store</h2>
+    <label for="nombre-crear">Nombre: </label>
+    <input type="text" name="nombre" id="nombre-crear">
+    <div id="errorNombre"></div>
+    
+    <label for="ubicacion-crear">Ubicacion: </label>
+    <input type="text" name="ubicacion" id="ubicacion-crear">
+    <label for="fecha-crear">Fecha: </label>
+    <input type="date" name="fecha" id="fecha-crear">
+    <label for="hora-crear">Hora: </label>
+    <input type="time" name="hora" id="hora-crear">
+    <button type="submit" id="crear">Crear Evento</button>
+    <hr>
+
+    <h2>Update</h2>
+    <label for="id-editar">ID Evento: </label>
+    <select name="id" id="id-editar">
+        <option value="">Seleccione un evento</option>
+    </select>
+    <label for="nombre-editar">Nombre: </label>
+    <input type="text" name="nombre" id="nombre-editar">
+    <label for="ubicacion-editar">Ubicacion: </label>
+    <input type="text" name="ubicacion" id="ubicacion-editar">
+    <label for="fecha-editar">Fecha: </label>
+    <input type="date" name="fecha" id="fecha-editar">
+    <label for="hora-editar">Hora: </label>
+    <input type="time" name="hora" id="hora-editar">
+    <button type="submit" id="editar">Actualizar Evento</button>
+    <hr>
+
+    <h2>Destroy</h2>
+    <label for="id-eliminar">ID Evento: </label>
+    <select name="id" id="id-eliminar">
+        <option value="">Seleccione un evento</option>
+    </select>
+    <button type="submit" id="eliminar">Eliminar Evento</button>
+    <hr>
+
+    <h2>Filtrar por Nombre</h2>
+    <label for="nombre-buscar">Nombre Evento: </label>
+    <input type="text" name="nombre" id="nombre-buscar">
+    <button type="submit" id="buscar-nombre">Buscar Evento</button>
+    <div id="resultado-evento-nombre"></div>
+    <hr>
+
+    <h2>Filtrar por Fechas</h2>
+    <label for="fecha-inicio-buscar">Fecha Inicio: </label>
+    <input type="date" name="fechaInicio" id="fecha-inicio-buscar">
+    <label for="fecha-fin-buscar">Fecha Fin: </label>
+    <input type="date" name="fechaFin" id="fecha-fin-buscar">
+    <button type="submit" id="buscar-fecha">Buscar Evento</button>
+    <div id="resultado-evento-fecha"></div>
+    <hr>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
