@@ -1,0 +1,58 @@
+body[data-theme="light"] {
+    --bg-color: #f5f5f5;
+    --text-color: #1f2933;
+    --card-bg: #ffffff;
+    --border-color: #d1d5db;
+    --button-bg: #2563eb;
+    --button-text: #ffffff;
+    --button-hover: #1e40af;
+}
+
+body[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #e5e7eb;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --button-bg: #9333ea;
+    --button-text: #ffffff;
+    --button-hover: #7e22ce;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, Arial, sans-serif;
+    padding: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.info {
+    margin: 8px 0;
+}
