@@ -59,7 +59,7 @@ anyadirCarrito.addEventListener('click', () => {
         nombre: "teclado",
         precio: 30.52
     }
-
+    
     const producto2 = {
         nombre: "monitor",
         precio: 258.65
